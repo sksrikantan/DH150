@@ -2,15 +2,20 @@ import streamlit as st
 import modeling
 
 def app(): 
-    st.write("This is where models will go.")
+    st.header("Shankara's Models")
+    st.write("More models on more data are coming!")
 
-    sel = st.selectbox('Model', ['Linear', 'Logistic'])
+    st.session_state.sel = st.selectbox('Model', ['Linear', 'Logistic'])
 
     with st.container():
-        if sel == 'Linear': 
-            accuracy, r2, y_hats = modeling.linear_regression()
-            st.write ('Yooo we ran some lin reg')
-        if sel == 'Logistic': 
-            st.write ('We can some logistic biya')
+        if st.session_state.sel == 'Linear': 
+            fig, accuracy, r2, y_hats = modeling.linear_regression()
+            fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+            st.plotly_chart(fig)
+        if st.session_state.sel == 'Logistic': 
+            fig, accuracy, y_hats = modeling.logistic_regression()
+            fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+            st.plotly_chart(fig)
+
     
     

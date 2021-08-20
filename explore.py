@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np 
 import plotly
 import plotly.figure_factory as ff
-import geopandas
 import matplotlib.pyplot as plt
 from urllib.request import urlopen
 import json
@@ -21,6 +20,9 @@ def app():
 
     comb = pd.read_csv('data.csv')
     variables = list(comb.columns)
+    print(variables)
+    variables.remove('fips')
+    variables.remove('Unnamed: 0')
 
     comb['fips'] = comb['fips'].apply(lambda x: math.trunc(x)).astype(str)
     fips = []

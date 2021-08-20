@@ -3,12 +3,9 @@ import pandas as pd
 import numpy as np 
 import plotly
 import plotly.figure_factory as ff
-import geopandas
 import matplotlib.pyplot as plt
 from urllib.request import urlopen
-import json
 import plotly.express as px
-import math
 
 import explore
 import models

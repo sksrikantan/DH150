@@ -1,4 +1,4 @@
-# DH150
+# US Political Trends and Predictions
 This repository contains all the important information for my DigHum150 project. 
 The website itself is run by the app.py file. 
 The Jupyter Notebook can be unzipped and run locally.

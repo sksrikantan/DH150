@@ -7,7 +7,7 @@ def app():
     also hope to overview some of the theory of election predictions that inspired 
     this work.""")
     st.write("""We can appreciate that social class, and group and individual identities
-    can predict, with high accuracy, election results.  
+    can predict election results with high accuracy.  
     Modeling elections based off of characteristics of the individual people that compose larger jurisdictions
     fails to account for many regional peculiarities. Perhaps many of these factors would be uncovered by 
     inclusion of more data. Perhaps not. This modeling approach also fails to consider anything related to 
